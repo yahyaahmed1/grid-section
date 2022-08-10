@@ -1,0 +1,191 @@
+.attribution {
+  grid-area: attr;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "sec" "attr";
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  background-color: hsl(210, 46%, 95%);
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  grid-area: sec;
+  width: 1270px;
+  height: 710px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    "daniel daniel daniel daniel daniel daniel jonathan jonathan jonathan kira kira kira"
+    "daniel daniel daniel daniel daniel daniel jonathan jonathan jonathan kira kira kira"
+    "daniel daniel daniel daniel daniel daniel jonathan jonathan jonathan kira kira kira"
+    "jeanette jeanette jeanette patrick patrick patrick patrick patrick patrick kira kira kira"
+    "jeanette jeanette jeanette patrick patrick patrick patrick patrick patrick kira kira kira"
+    "jeanette jeanette jeanette patrick patrick patrick patrick patrick patrick kira kira kira"
+    "jeanette jeanette jeanette patrick patrick patrick patrick patrick patrick kira kira kira";
+  gap: 20px 20px;
+}
+
+.daniel-card {
+  grid-area: daniel;
+  position: relative;
+  background-color: hsl(263, 55%, 52%);
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  padding: 35px;
+}
+
+.daniel-card > img {
+  position: absolute;
+  left: 65%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.header > img {
+  border-radius: 50%;
+  border: 1px white solid;
+  width: 40px;
+}
+
+.info {
+  padding-left: 20px;
+  line-height: 20px;
+}
+
+.info .name {
+  color: hsl(0, 0%, 81%);
+  font-size: 15px;
+}
+
+.info span {
+  color: hsl(0, 0%, 81%, 50%);
+}
+
+.mid {
+  color: hsl(210, 46%, 95%);
+  position: relative;
+  font-size: 23px;
+  padding-bottom: 15px;
+}
+
+.footer {
+  font-size: 16px;
+  color: hsl(210, 46%, 95%, 50%);
+}
+
+.jonathan-card {
+  grid-area: jonathan;
+  background-color: hsl(217, 19%, 35%);
+  border-radius: 10px;
+  padding: 35px;
+}
+
+.kira-card,
+.jeanette-card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  padding: 35px;
+}
+
+.kira-card {
+  grid-area: kira;
+}
+
+.jeanette-card {
+  grid-area: jeanette;
+}
+
+.kira-card > .header .info .name,
+.kira-card > .mid,
+.jeanette-card > .header .info .name,
+.jeanette-card > .mid {
+  color: hsl(219, 29%, 14%);
+}
+
+.kira-card > .header .info span,
+.kira-card > .footer,
+.jeanette-card > .header .info span,
+.jeanette-card > .footer {
+  color: hsl(219, 29%, 14%, 50%);
+}
+
+.jeanette-card > .mid,
+.kira-card > .mid {
+  font-size: 27px;
+  padding-bottom: 25px;
+}
+
+.jeanette-card > .footer,
+.kira-card > .footer {
+  line-height: 22px;
+  font-size: 16px;
+}
+
+.patrick-card {
+  grid-area: patrick;
+  background-color: hsl(219, 29%, 14%);
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  padding: 35px;
+}
+
+.patrick-card > .header img {
+  border-radius: 50%;
+  border: 2px hsl(263, 55%, 52%) solid;
+  width: 40px;
+}
+
+@media (max-width: 768px) {
+  section {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 325px);
+    grid-template-rows: repeat(19, auto);
+    grid-template-areas:
+      "."
+      "."
+      "daniel"
+      "daniel"
+      "daniel"
+      "daniel"
+      "jonathan"
+      "jonathan"
+      "jeanette"
+      "jeanette"
+      "patrick"
+      "patrick"
+      "patrick"
+      "kira"
+      "kira"
+      "kira"
+      "kira"
+      "."
+      ".";
+  }
+}
